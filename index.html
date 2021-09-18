@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Recruitment task for Invisio</title>
+</head>
+<body>
+    <h1 class="display-3 text-center mt-4 mb-4">Sortable table with car details</h1>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end btn-container">
+    <button type="button" class="btn btn-secondary" id="open">Add New Car to Table</button>
+    <input type="text" id="searchInput" class="form-control search" placeholder="Search for cars..">    
+</div>
+
+<!-- Modal -->
+    <div class="modal-container" id="modal">
+        <div class="car-modal">
+            <button class="close-btn" id="close">
+               <i class="fa fa-times"></i>
+          </button>
+      <div class="modal-header">
+        <h3>Enter Car Details</h3>
+      </div>
+      <div class="modal-content">
+        
+        <form class="modal-form" id="form">
+          <div>
+            <label for="carBrand">Car Brand</label>
+            <input
+              type="text"
+              id="carBrand"
+              placeholder="Enter Car Brand"
+              class="form-input"
+            />
+          </div>
+          <div>
+            <label for="CarModel">Car Model</label>
+            <input
+              type="text"
+              id="carModel"
+              placeholder="Enter Car Model"
+              class="form-input"
+            />
+          </div>
+          <div>
+            <label for="production">Year of Production</label>
+            <input
+              type="number"
+              id="production"
+              placeholder="Enter Year of Production"
+              class="form-input"
+            />
+          </div>
+          <button class="submit-btn btn btn-secondary" id="close">Submit</button>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+    
+    <!-- Tabela -->
+
+    <table id="carTable" class="table table-striped table-hover table-sortable">
+    <thead>
+        <tr>
+            
+            <th>Car Brand</th>
+            <th>Car model</th>
+            <th>Year of Production</th>
+            <th>Control</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+       
+        <tr>
+            
+            <td>Audi</td>
+            <td>Q5</td>
+            <td class="year">2021</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+           
+        </tr>
+        <tr>
+            
+            <td>Audi</td>
+            <td>Q2</td>
+            <td class="year">2018</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+           
+        </tr>
+        <tr>
+            
+            <td>Audi</td>
+            <td>S7</td>
+            <td class="year">2019</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+            
+        </tr>
+        <tr>
+           
+            <td>Peugeot</td>
+            <td>407 SW</td>
+            <td class="year">2008</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+           
+        </tr>
+        <tr>
+            
+            <td>Peugeot</td>
+            <td>508</td>
+            <td class="year">2012</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+           
+        </tr>
+        <tr>
+            
+            <td>Peugeot</td>
+            <td>4007</td>
+            <td class="year">2012</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+        </tr>
+        <tr>
+            
+            <td>Citroen</td>
+            <td>C5</td>
+            <td class="year">2018</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+        </tr>
+        <tr>
+            
+            <td>Citroen</td>
+            <td>C4</td>
+            <td class="year">2019</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+        </tr>
+        <tr>
+            
+            <td>Citroen</td>
+            <td>C-Elysee</td>
+            <td class="year">2015</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+        </tr>
+        <tr>
+            
+            <td>Citroen</td>
+            <td>C4 Cactus</td>
+            <td class="year">2020</td>
+            <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+    <script src="js/table.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
